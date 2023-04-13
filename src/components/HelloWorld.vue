@@ -29,7 +29,10 @@ onMounted(() => {
   console.log( "mounted osm", osm)
 
   const viewer = new Viewer("cesiumContainer", {
-    imageryProvider: osm
+    imageryProvider: osm,
+    geocoder: false,
+    animation: false,
+    timeline: false
   });
 
   console.log( "mounted viewer", viewer)
